@@ -12,9 +12,10 @@ const Layout = ({ children }) => (
   <>
     <main
       css={`
-        max-width: 70vw;
-        width: 600px;
-        margin: 2rem auto 4rem;
+        max-width: 90vw;
+        margin: 2.5rem auto 4rem;
+        width: 75%;
+        display: block;
       `}
     >
       {children}

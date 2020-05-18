@@ -3,17 +3,14 @@ import styled from 'styled-components';
 
 const Body = styled.div`
   text-align: left;
-  padding-bottom: 0.3em;
+  padding-bottom: 0.5em;
   cursor: pointer;
+  border-bottom: solid 1px rgb(50, 64, 69, 0.25);
 
   & > p {
     color: rgb(40, 42, 53);
     font-size: 0.9em;
     margin-top: -0.25em;
-  }
-
-  &:hover {
-    border: solid 2px #000;
   }
 `;
 

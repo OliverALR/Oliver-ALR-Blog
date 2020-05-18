@@ -1,10 +1,29 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { FaGithub, FaTwitter } from 'react-icons/fa';
 
+const colored = keyframes`
+    0% {
+        color: rgb(25, 188, 54);
+        transition: all 300ms linear;
+    } 25% {
+        color: rgb(255, 114, 97);
+        transition: all 300ms linear;
+    } 50% {
+        color: rgb(242, 78, 30);
+        transition: all 300ms linear;
+    } 75% {
+        color: rgb(162, 89, 255);
+        transition: all 300ms linear;
+    } 100% {
+        color: rgb(9, 207, 131);
+        transition: all 300ms linear;
+    }
+`;
+
 const Github = styled(FaGithub)`
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
   opacity: 0.25;
   padding: 2em 0.35em 1em 0em;
 
@@ -16,8 +35,8 @@ const Github = styled(FaGithub)`
 `;
 
 const Twitter = styled(FaTwitter)`
-  width: 35px;
-  height: 35px;
+  width: 36px;
+  height: 36px;
   opacity: 0.25;
   padding: 2em 0em 1em 0.35em;
 
@@ -35,6 +54,7 @@ const Footer = () => (
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-top: 0.5em;
       `}
     >
       <a
@@ -63,8 +83,12 @@ const Footer = () => (
         justify-content: center;
         text-align: center;
         font-family: 'Jost', sans-serif;
-        font-size: 0.85em;
+        font-size: 0.95em;
         color: rgb(0, 0, 0, 0.5);
+
+        &:hover {
+          animation: ${colored} 3s linear infinite;
+        }
       `}
     >
       ©2020 This is Oliver ALR

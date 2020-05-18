@@ -6,6 +6,7 @@ import Header from '../components/header';
 import Titles from '../components/titles';
 import Navbar from '../components/navbar';
 import Layout from '../components/layout';
+import Footer from '../components/footer';
 
 export default () => (
   <>
@@ -13,5 +14,6 @@ export default () => (
     <Titles />
     <Navbar />
     <h3 css="text-align: center;">This is the projects section</h3>
+    <Footer />
   </>
 );
