@@ -11,13 +11,23 @@ const Title = styled.h1`
 
 const Desc = styled(Title)`
   font-size: 1.15em;
-  margin: 0em 4em 0em 4em;
+  margin: 0 20% 0 20%;
   padding-top: 0.25em;
+
+  @media (min-width: 250px) and (max-width: 768px) {
+    margin: 0 12.5% 0 12.5%;
+    text-align: justify;
+  }
 `;
 
 const Contact = styled(Title)`
-  font-size: 1em;
-  padding-top: 0.5em;
+  font-size: 1.1em;
+  padding-top: 1.5em;
+  margin: 0 20% 0 20%;
+
+  @media (min-width: 300px) and (max-width: 359px) {
+    margin: 0 10% 0 10%;
+  }
 `;
 
 const Titles = () => (
@@ -31,11 +41,11 @@ const Titles = () => (
     <Desc>
       Welcome to my blog where you can find{' '}
       <span css="color: #F7E01E;">JavaScript</span>,{' '}
-      <span css="color: #52D8FF;">React</span> and my
-      <span css="color: #32C119;"> entrepreneurial adventures </span>related
+      <span css="color: #52D8FF;">React</span> and my{' '}
+      <span css="color: #32C119;">entrepreneurial adventures</span> related
       posts. I'll hope you enjoy it.
     </Desc>
-    <Contact>You can keep in touch: oliveralr@protonmail.com</Contact>
+    <Contact>Keep in touch with me: oliveralr@protonmail.com</Contact>
   </>
 );
 
