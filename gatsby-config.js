@@ -14,11 +14,10 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: 'gatsby-plugin-google-fonts',
       options: {
-        google: {
-          families: ['Jost'],
-        },
+        fonts: [`Balsamiq Sans`, `Roboto`, `Jost`, `sans-serif cursive\:400`],
+        display: 'swap',
       },
     },
   ],

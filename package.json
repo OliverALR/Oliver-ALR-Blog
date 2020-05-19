@@ -19,6 +19,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.21.33",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-mdx": "^1.2.8",
     "gatsby-plugin-react-helmet": "^3.3.1",
     "gatsby-plugin-react-svg": "^3.0.0",

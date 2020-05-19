@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Title = styled.h1`
-  font-family: 'Jost', sans-serif;
+  font-family: 'Balsamiq Sans';
   font-weight: 800;
   font-size: 1.25em;
   text-align: center;
@@ -10,6 +10,7 @@ const Title = styled.h1`
 `;
 
 const Desc = styled(Title)`
+  font-family: 'Jost';
   font-size: 1.15em;
   margin: 0 20% 0 20%;
   padding-top: 0.25em;

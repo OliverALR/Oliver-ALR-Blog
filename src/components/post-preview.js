@@ -20,7 +20,7 @@ const Body = styled(Link)`
 `;
 
 const Title = styled.h2`
-  font-family: 'Jost', sans-serif;
+  font-family: 'Jost';
   font-size: 2em;
   font-weight: bold;
   color: rgb(100, 49, 151);

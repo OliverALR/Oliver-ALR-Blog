@@ -12,6 +12,7 @@ import Footer from '../components/footer';
 
 export default () => (
   <>
+    <Layout />
     <Header />
     <Titles />
     <Navbar />
@@ -20,6 +21,5 @@ export default () => (
       <PostPreview />
     </BlogGlobal>
     <Footer />
-    <Layout></Layout>
   </>
 );
