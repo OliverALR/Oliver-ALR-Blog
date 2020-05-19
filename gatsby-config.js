@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'My Blog',
+    title: 'Oliver ALR | Blog',
     description: 'My own blazing fast blog powered by Gatsby',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
@@ -19,9 +20,6 @@ module.exports = {
           families: ['Jost'],
         },
       },
-    },
-    {
-      resolve: 'gatsby-plugin-react-svg',
     },
   ],
 };
