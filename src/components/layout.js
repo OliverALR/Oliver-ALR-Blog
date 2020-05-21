@@ -7,6 +7,7 @@ import useSiteMetadata from '../hooks/use-sitemetadata';
 const GlobalStyle = createGlobalStyle`
     * {
         background-color: rgb(244, 245, 241);
+        overflow-x: hidden;
     }
 `;
 
