@@ -9,17 +9,24 @@ import Navbar from '../components/navbar';
 import PostPreview from '../components/post-preview';
 import BlogGlobal from '../components/blog-global';
 import Footer from '../components/footer';
+// Data Hooks
+import usePosts from '../hooks/use-posts';
 
-export default () => (
-  <>
-    <Layout />
-    <Header />
-    <Titles />
-    <Navbar />
-    <BlogGlobal>
-      <PostPreview />
-      <PostPreview />
-    </BlogGlobal>
-    <Footer />
-  </>
-);
+export default () => {
+  const posts = usePosts();
+
+  return (
+    <>
+      <Layout />
+      <Header />
+      <Titles />
+      <Navbar />
+      <BlogGlobal>
+        {posts.map((post) => (
+          <PostPreview key={post.slug} post={post} />
+        ))}
+      </BlogGlobal>
+      <Footer />
+    </>
+  );
+};

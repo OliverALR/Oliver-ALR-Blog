@@ -41,12 +41,12 @@ const Slug = styled.h3`
   }
 `;
 
-const PostPreview = () => (
+const PostPreview = ({ post }) => (
   <>
-    <Body to="abrand-new-slug">
-      <Title>Post Title</Title>
-      <p>Publish Date &#x25CF; 3 min read</p>
-      <Slug>This is the slug section</Slug>
+    <Body to={post.slug}>
+      <Title>{post.title}</Title>
+      <p>{post.date} &#x25CF; 3 min read</p>
+      <Slug>{post.slug}</Slug>
       <div
         css={`
           border-bottom: solid 2px rgb(50, 64, 69, 0.25);

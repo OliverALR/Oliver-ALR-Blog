@@ -3,7 +3,19 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import PostLayout from '../components/post-layout';
 
-const PostTemplate = () => (
+export const query = graphql`
+  query($slug: String!) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        date
+      }
+      body
+    }
+  }
+`;
+
+const PostTemplate = ({ data: { mdx: post } }) => (
   <PostLayout>
     <h1
       css={`
@@ -11,10 +23,10 @@ const PostTemplate = () => (
         font-size: 1.25em;
       `}
     >
-      Post Title
+      {post.frontmatter.title}
     </h1>
-    <p>This is the post subtitle</p>
-    <MDXRenderer>{`This is some content`}</MDXRenderer>
+    <p>Published: {post.frontmatter.date}</p>
+    <MDXRenderer>{post.body}</MDXRenderer>
   </PostLayout>
 );
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaCodepen } from 'react-icons/fa';
 
 const colored = keyframes`
     0% {
@@ -22,8 +22,8 @@ const colored = keyframes`
 `;
 
 const Github = styled(FaGithub)`
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   opacity: 0.25;
   padding: 2em 0.35em 1em 0em;
 
@@ -35,13 +35,26 @@ const Github = styled(FaGithub)`
 `;
 
 const Twitter = styled(FaTwitter)`
-  width: 36px;
-  height: 36px;
+  width: 35px;
+  height: 35px;
   opacity: 0.25;
   padding: 2em 0em 1em 0.35em;
 
   &:hover {
     color: rgb(29, 161, 242);
+    opacity: 1;
+    transition: all 200ms linear;
+  }
+`;
+
+const Codepen = styled(FaCodepen)`
+  width: 32px;
+  height: 32px;
+  opacity: 0.25;
+  padding: 2em 0em 1em 0.5em;
+
+  &:hover {
+    color: #000;
     opacity: 1;
     transition: all 200ms linear;
   }
@@ -74,6 +87,15 @@ const Footer = () => (
         href="https://twitter.com/theoliveralr"
       >
         <Twitter />
+      </a>
+      <a
+        css={`
+          color: rgba(0, 0, 0, 0.75);
+          text-decoration: none;
+        `}
+        href="https://codepen.io/oliverhuxley"
+      >
+        <Codepen />
       </a>
     </div>
 
