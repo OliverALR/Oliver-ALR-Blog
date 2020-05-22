@@ -10,13 +10,28 @@ const Header = styled.div`
   display: flex;
 `;
 
+const Main = styled.main`
+  padding-top: 2em;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: left;
+  font-size: 1em;
+  color: purple;
+
+  & p {
+    text-align: center;
+    font-size: 0.85em;
+    color: rgba(20, 20, 20, 0.75);
+  }
+`;
+
 const PostLayout = ({ children }) => {
   return (
     <>
       <Layout />
       <Header>
         <Link to="/">Home</Link>
-        <main>{children}</main>
+        <Main>{children}</Main>
       </Header>
       <Footer />
     </>

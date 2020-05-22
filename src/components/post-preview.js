@@ -43,7 +43,7 @@ const Slug = styled.h3`
 
 const PostPreview = () => (
   <>
-    <Body to="/contact">
+    <Body to="abrand-new-slug">
       <Title>Post Title</Title>
       <p>Publish Date &#x25CF; 3 min read</p>
       <Slug>This is the slug section</Slug>

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import PostLayout from '../components/post-layout';
 
-const PostTemplate = () => {
+const PostTemplate = () => (
   <PostLayout>
     <h1
       css={`
@@ -14,8 +14,8 @@ const PostTemplate = () => {
       Post Title
     </h1>
     <p>This is the post subtitle</p>
-    <MDXRenderer></MDXRenderer>
-  </PostLayout>;
-};
+    <MDXRenderer>{`This is some content`}</MDXRenderer>
+  </PostLayout>
+);
 
 export default PostTemplate;
