@@ -20,6 +20,10 @@ const Layout = () => {
       <Helmet>
         <html lang="en-US" />
         <title>{title}</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <meta name="description" content={description} />
       </Helmet>
     </>

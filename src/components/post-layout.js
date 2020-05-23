@@ -17,7 +17,11 @@ const Header = styled.div`
     text-decoration: none;
     color: rgb(100, 49, 151);
     font-family: 'Cabin';
-    font-size: 1.65em;
+    font-size: 1.5em;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
@@ -30,7 +34,7 @@ const Main = styled.main`
   color: rgb(100, 49, 151);
 
   & h1 {
-    font-size: 2.5em;
+    font-size: 2.35em;
   }
 
   & h2,
@@ -38,7 +42,7 @@ const Main = styled.main`
   h5,
   h6 {
     font-family: 'Patua One';
-    font-size: 1.8em;
+    font-size: 1.7em;
     font-weight: 600;
     padding-top: 1.25em;
   }
