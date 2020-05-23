@@ -31,7 +31,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [`Balsamiq Sans`, `Roboto`, `Jost`, `sans-serif cursive\:400`],
+        fonts: [
+          `Balsamiq Sans`,
+          `Roboto`,
+          `Jost`,
+          `sans-serif cursive\:400,500,800`,
+        ],
         display: 'swap',
       },
     },

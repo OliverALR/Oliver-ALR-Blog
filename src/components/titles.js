@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Title = styled.h1`
-  font-family: 'Balsamiq Sans';
+  font-family: 'Jost';
   font-weight: 800;
   font-size: 1.25em;
   text-align: center;
@@ -12,6 +12,7 @@ const Title = styled.h1`
 const Desc = styled(Title)`
   font-family: 'Jost';
   font-size: 1.15em;
+  letter-spacing: 0.85px;
   margin: 0 20% 0 20%;
   padding-top: 0.25em;
 
@@ -46,7 +47,16 @@ const Titles = () => (
       <span css="color: #32C119;">entrepreneurial adventures</span> related
       posts. I'll hope you enjoy it.
     </Desc>
-    <Contact>Keep in touch with me: oliveralr@protonmail.com</Contact>
+    <Contact>
+      Keep in touch with me:{' '}
+      <span
+        css={`
+          font-family: 'Balsamiq Sans';
+        `}
+      >
+        oliveralr@protonmail.com
+      </span>
+    </Contact>
   </>
 );
 
