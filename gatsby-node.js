@@ -1,3 +1,7 @@
+const sharp = require('sharp');
+sharp.cache(false);
+sharp.simd(true);
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     query {

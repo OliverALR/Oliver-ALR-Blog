@@ -53,6 +53,13 @@ const Main = styled.main`
     font-size: 1.2em;
     color: rgba(0, 0, 0, 0.75);
   }
+
+  & code {
+    color: #000;
+    font-family: 'Balsamiq Sans';
+    font-size: 1em;
+    color: #000;
+  }
 `;
 
 const PostLayout = ({ children }) => {

@@ -9,6 +9,17 @@ const usePosts = () => {
             date
             title
             slug
+            image {
+              sharp: childImageSharp {
+                fluid(
+                  maxWidth: 200
+                  maxHeight: 200
+                  duotone: { shadow: "#663399", highlight: "#ddbbff" }
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
           excerpt
         }
@@ -20,6 +31,7 @@ const usePosts = () => {
     date: post.frontmatter.date,
     title: post.frontmatter.title,
     slug: post.frontmatter.slug,
+    image: post.frontmatter.image,
     excerpt: post.frontmatter.excerpt,
   }));
 };

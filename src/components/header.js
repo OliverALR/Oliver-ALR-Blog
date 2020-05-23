@@ -1,4 +1,6 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -15,18 +17,32 @@ const Container = styled.div`
   }
 `;
 
-const Img = styled.img`
+const Image = styled(Img)`
   width: 80px;
   height: 80px;
   border-radius: 50%;
   border: solid 3px rgb(100, 49, 151);
 `;
 
-const Header = () => (
-  <Container>
-    <Img src={require('../../images/me.jpg')} />
-    <span>☀️</span>
-  </Container>
-);
+const Header = () => {
+  const { image } = useStaticQuery(graphql`
+    query {
+      image: file(relativePath: { eq: "me.jpg" }) {
+        sharp: childImageSharp {
+          fluid(maxWidth: 600, maxHeight: 600) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <Container>
+      <Image fluid={image.sharp.fluid} alt="Oliver ALR" />
+      <span>☀️</span>
+    </Container>
+  );
+};
 
 export default Header;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import Img from 'gatsby-image';
 import PostLayout from '../components/post-layout';
 
 export const query = graphql`
@@ -9,6 +10,17 @@ export const query = graphql`
       frontmatter {
         title
         date
+        image {
+          sharp: childImageSharp {
+            fluid(
+              maxWidth: 100
+              maxHeight: 100
+              duotone: { shadow: "#663399", highlight: "#ddbbff" }
+            ) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
       body
     }
@@ -34,6 +46,7 @@ const PostTemplate = ({ data: { mdx: post } }) => (
     >
       Published: {post.frontmatter.date}
     </p>
+
     <MDXRenderer>{post.body}</MDXRenderer>
   </PostLayout>
 );
