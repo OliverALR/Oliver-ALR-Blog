@@ -10,6 +10,7 @@ const Body = styled(Link)`
 
   & > p {
     color: rgb(40, 42, 53);
+    font-family: 'Jost';
     font-size: 0.9em;
     margin-top: -0.25em;
 
@@ -20,7 +21,7 @@ const Body = styled(Link)`
 `;
 
 const Title = styled.h2`
-  font-family: 'Cabin';
+  font-family: 'Patua One';
   font-size: 2em;
   font-weight: 800;
   color: rgb(100, 49, 151);
@@ -31,7 +32,7 @@ const Title = styled.h2`
 `;
 
 const Slug = styled.h3`
-  font-family: 'Jost', sans-serif;
+  font-family: 'Cabin', sans-serif;
   font-size: 1.25em;
   color: rgba(0, 0, 0, 0.55);
   margin-top: -0.35em;
@@ -45,7 +46,7 @@ const PostPreview = ({ post }) => (
   <>
     <Body to={post.slug}>
       <Title>{post.title}</Title>
-      <p>{post.date} &#x25CF; 3 min read</p>
+      <p>{post.date} &#x25CF; 3 min read 📖☕️</p>
       <Slug>{post.slug}</Slug>
       <div
         css={`

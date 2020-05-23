@@ -51,7 +51,7 @@ const Titles = () => (
       Keep in touch with me:{' '}
       <span
         css={`
-          font-weight: 800;
+          color: rgb(242, 78, 30);
         `}
       >
         oliveralr@protonmail.com

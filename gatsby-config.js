@@ -35,6 +35,7 @@ module.exports = {
           `Balsamiq Sans`,
           `Cabin`,
           `Jost`,
+          `Patua One`,
           `sans-serif\:400,500,700,800`,
           `cursive\:400,800`,
         ],

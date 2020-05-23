@@ -6,7 +6,7 @@ const BlogGlobal = ({ children }) => (
     <main
       css={`
         max-width: 90vw;
-        margin: 2.5rem auto 4rem;
+        margin: 1.5rem auto 4rem;
         width: 58%;
         position: static;
 

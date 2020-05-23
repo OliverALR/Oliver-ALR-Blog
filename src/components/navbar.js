@@ -18,7 +18,7 @@ const List = styled.nav`
     /* color: #52d8ff; */
     font-size: 1.2em;
     font-weight: 600;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Cabin', sans-serif;
 
     &.current-page {
       border-bottom: 2px solid rgb(100, 49, 151);
