@@ -5,7 +5,7 @@ import { Link } from '@reach/router';
 const Body = styled(Link)`
   text-decoration: none;
   text-align: left;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.65em;
   cursor: pointer;
 
   & > p {

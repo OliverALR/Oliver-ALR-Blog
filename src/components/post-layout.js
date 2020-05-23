@@ -8,20 +8,47 @@ import Footer from './footer';
 
 const Header = styled.div`
   display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+  margin-left: 12%;
+  margin-right: 12%;
+
+  & > a {
+    text-decoration: none;
+    color: rgb(100, 49, 151);
+    font-family: 'Cabin';
+    font-size: 1.65em;
+  }
 `;
 
 const Main = styled.main`
-  padding-top: 2em;
-  margin-left: 15%;
-  margin-right: 15%;
+  padding-top: 1.5em;
+  margin-left: 12%;
+  margin-right: 12%;
+  font-family: 'Jost';
   text-align: left;
-  font-size: 1em;
-  color: purple;
+  text-decoration: none;
+  color: rgb(100, 49, 151);
+
+  & h1 {
+    font-size: 2.5em;
+  }
+
+  & h2,
+  h3,
+  h5,
+  h6 {
+    font-family: 'Patua One';
+    font-size: 1.8em;
+    font-weight: 600;
+    padding-top: 1.25em;
+  }
 
   & p {
-    text-align: center;
-    font-size: 0.85em;
-    color: rgba(20, 20, 20, 0.75);
+    text-align: justify;
+    line-height: 1.85em;
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, 0.75);
   }
 `;
 
@@ -30,9 +57,10 @@ const PostLayout = ({ children }) => {
     <>
       <Layout />
       <Header>
-        <Link to="/">Home</Link>
-        <Main>{children}</Main>
+        <Link to="/">&larr; Home</Link>
+        <span>☀️</span>
       </Header>
+      <Main>{children}</Main>
       <Footer />
     </>
   );

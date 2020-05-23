@@ -20,12 +20,20 @@ const PostTemplate = ({ data: { mdx: post } }) => (
     <h1
       css={`
         color: rgb(100, 49, 151);
-        font-size: 1.25em;
+        font-family: 'Patua One';
+        font-size: 2.25em;
       `}
     >
       {post.frontmatter.title}
     </h1>
-    <p>Published: {post.frontmatter.date}</p>
+    <p
+      css={`
+        font-family: 'Jost';
+        font-size: 1.5em;
+      `}
+    >
+      Published: {post.frontmatter.date}
+    </p>
     <MDXRenderer>{post.body}</MDXRenderer>
   </PostLayout>
 );

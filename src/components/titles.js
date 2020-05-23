@@ -47,16 +47,7 @@ const Titles = () => (
       <span css="color: #32C119;">entrepreneurial adventures</span> related
       posts. I'll hope you enjoy it.
     </Desc>
-    <Contact>
-      Keep in touch with me:{' '}
-      <span
-        css={`
-          color: rgb(242, 78, 30);
-        `}
-      >
-        oliveralr@protonmail.com
-      </span>
-    </Contact>
+    <Contact>Keep in touch with me: oliveralr@protonmail.com</Contact>
   </>
 );
 
