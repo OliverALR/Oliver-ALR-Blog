@@ -27,7 +27,6 @@ const Main = styled.main`
   margin-right: 12%;
   font-family: 'Jost';
   text-align: left;
-  text-decoration: none;
   color: rgb(100, 49, 151);
 
   & h1 {
