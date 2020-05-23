@@ -33,9 +33,10 @@ module.exports = {
       options: {
         fonts: [
           `Balsamiq Sans`,
-          `Roboto`,
+          `Cabin`,
           `Jost`,
-          `sans-serif cursive\:400,500,800`,
+          `sans-serif\:400,500,700,800`,
+          `cursive\:400,800`,
         ],
         display: 'swap',
       },

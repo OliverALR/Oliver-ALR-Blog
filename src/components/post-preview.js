@@ -20,9 +20,9 @@ const Body = styled(Link)`
 `;
 
 const Title = styled.h2`
-  font-family: 'Roboto';
+  font-family: 'Cabin';
   font-size: 2em;
-  font-weight: bold;
+  font-weight: 800;
   color: rgb(100, 49, 151);
 
   @media (min-width: 300px) and (max-width: 768px) {
