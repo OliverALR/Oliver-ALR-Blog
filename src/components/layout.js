@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
+import gorilla from '../../static/gorilla.ico';
 import { Helmet } from 'react-helmet';
 // Imported Hooks
 import useSiteMetadata from '../hooks/use-sitemetadata';
@@ -25,6 +26,7 @@ const Layout = () => {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
         <meta name="description" content={description} />
+        <link rel="icon" href={gorilla} />
       </Helmet>
     </>
   );
