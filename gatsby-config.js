@@ -15,6 +15,9 @@ module.exports = {
           default: require.resolve('./src/components/post-layout.js'),
         },
         gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
+        plugins: [
+          { resolve: 'gatsby-remark-images', options: { maxWidth: 590 } },
+        ],
       },
     },
     {

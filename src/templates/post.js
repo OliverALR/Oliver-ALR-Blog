@@ -12,12 +12,8 @@ export const query = graphql`
         date
         image {
           sharp: childImageSharp {
-            fluid(
-              maxWidth: 100
-              maxHeight: 100
-              duotone: { shadow: "#663399", highlight: "#ddbbff" }
-            ) {
-              ...GatsbyImageSharpFluid_withWebp
+            fluid(maxWidth: 200, maxHeight: 200) {
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
@@ -46,7 +42,14 @@ const PostTemplate = ({ data: { mdx: post } }) => (
     >
       Published: {post.frontmatter.date}
     </p>
-
+    {/* <Img
+      css={`
+        width: 300px;
+        height: 300px;
+      `}
+      fluid={post.frontmatter.image.sharp.fluid}
+      alt="post image"
+    /> */}
     <MDXRenderer>{post.body}</MDXRenderer>
   </PostLayout>
 );

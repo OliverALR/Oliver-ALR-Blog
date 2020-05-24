@@ -32,7 +32,7 @@ const Title = styled.h2`
 `;
 
 const Slug = styled.h3`
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Cabin';
   font-size: 1.25em;
   color: rgba(0, 0, 0, 0.55);
   margin-top: -0.35em;

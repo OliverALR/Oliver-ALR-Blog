@@ -11,12 +11,8 @@ const usePosts = () => {
             slug
             image {
               sharp: childImageSharp {
-                fluid(
-                  maxWidth: 200
-                  maxHeight: 200
-                  duotone: { shadow: "#663399", highlight: "#ddbbff" }
-                ) {
-                  ...GatsbyImageSharpFluid_withWebp
+                fluid(maxWidth: 200, maxHeight: 200) {
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }
