@@ -48,5 +48,23 @@ module.exports = {
         display: 'swap',
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Oliver ALR Blog',
+        short_name: 'OliverALR',
+        start_url: '/',
+        background_color: '#6b37bf',
+        theme_color: '#6b37bf',
+        display: 'standalone',
+        icon: 'images/my_gorilla.png',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/src/*`, `/posts/*`],
+      },
+    },
   ],
 };
