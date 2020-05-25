@@ -1,0 +1,31 @@
+export const lightTheme = {
+  body: '#F4F5F1',
+  profile: '#643197',
+  h1: '#333746',
+  h2: '#643197',
+  h3: '#ccc',
+  p: '#282A35',
+  email: '#F4F5F1',
+  mode_icon: '#C7C8C4',
+  a: '#643197',
+  border_bottom: '#643197',
+  divisor: '#324045',
+  social_icons: '#969696',
+  copyright: '#7A7A7A',
+};
+
+export const darkTheme = {
+  body: '#282C35',
+  profile: '#AF63FC',
+  h1: '#F4F5F1',
+  h2: '#AF63FC',
+  h3: '#B9B9B9',
+  p: '#F4F5F1',
+  email: '#F4F5F1',
+  mode_icon: '#C7C8C4',
+  a: '#AF63FC',
+  border_bottom: '#AF63FC',
+  divisor: '#D5D5D5',
+  social_icons: '#F4F5F1',
+  copyright: '#F4F5F1',
+};

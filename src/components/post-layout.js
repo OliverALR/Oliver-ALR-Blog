@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { FaMoon, FaSun } from 'react-icons/fa';
 // Layout Components
 import Layout from './layout';
 import Footer from './footer';
@@ -22,6 +23,28 @@ const Header = styled.div`
     &:hover {
       text-decoration: underline;
     }
+  }
+`;
+
+const Moon = styled(FaMoon)`
+  width: 30px;
+  height: 30px;
+  color: rgb(199, 200, 196);
+
+  &:hover {
+    color: #000;
+    transition: all 700ms linear;
+  }
+`;
+
+const Sun = styled(FaSun)`
+  width: 35px;
+  height: 35px;
+  color: rgb(199, 200, 196);
+
+  &:hover {
+    color: #fff;
+    transition: all 500ms linear;
   }
 `;
 
@@ -68,7 +91,9 @@ const PostLayout = ({ children }) => {
       <Layout />
       <Header>
         <Link to="/">&larr; Home</Link>
-        <span>☀️</span>
+        <span>
+          <Moon />
+        </span>
       </Header>
       <Main>{children}</Main>
       <Footer />

@@ -28,7 +28,6 @@ const Github = styled(FaGithub)`
   padding: 2em 0.35em 1em 0em;
 
   &:hover {
-    color: #000;
     opacity: 1;
     transition: all 200ms linear;
   }
@@ -41,7 +40,6 @@ const Twitter = styled(FaTwitter)`
   padding: 2em 0em 1em 0.35em;
 
   &:hover {
-    color: rgb(29, 161, 242);
     opacity: 1;
     transition: all 200ms linear;
   }
@@ -54,7 +52,6 @@ const Codepen = styled(FaCodepen)`
   padding: 2em 0em 1em 0.5em;
 
   &:hover {
-    color: #000;
     opacity: 1;
     transition: all 200ms linear;
   }
@@ -63,6 +60,7 @@ const Codepen = styled(FaCodepen)`
 const Footer = () => (
   <>
     <div
+      className="social-icons"
       css={`
         display: flex;
         justify-content: center;
@@ -71,8 +69,8 @@ const Footer = () => (
       `}
     >
       <a
+        className="github"
         css={`
-          color: rgba(0, 0, 0, 0.75);
           text-decoration: none;
         `}
         href="https://github.com/OliverALR"
@@ -80,8 +78,8 @@ const Footer = () => (
         <Github />
       </a>
       <a
+        className="twitter"
         css={`
-          color: rgba(0, 0, 0, 0.75);
           text-decoration: none;
         `}
         href="https://twitter.com/theoliveralr"
@@ -89,8 +87,8 @@ const Footer = () => (
         <Twitter />
       </a>
       <a
+        className="codepen"
         css={`
-          color: rgba(0, 0, 0, 0.75);
           text-decoration: none;
         `}
         href="https://codepen.io/oliverhuxley"
@@ -100,13 +98,13 @@ const Footer = () => (
     </div>
 
     <small
+      className="copyright"
       css={`
         display: flex;
         justify-content: center;
         text-align: center;
         font-family: 'Jost', sans-serif;
         font-size: 0.95em;
-        color: rgb(0, 0, 0, 0.5);
 
         &:hover {
           animation: ${colored} 3s linear infinite;

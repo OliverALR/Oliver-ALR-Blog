@@ -7,7 +7,6 @@ const Title = styled.h1`
   font-size: 1.25em;
   text-align: left;
   margin: 0 21% 0 21%;
-  color: rgb(51, 55, 70);
   padding-top: 1em;
 
   @media (min-width: 250px) and (max-width: 768px) {
@@ -55,9 +54,9 @@ const Titles = () => (
     <Contact>
       Keep in touch with me:{' '}
       <a
+        className="email"
         href="mailto: oliveralr@protonmail.com"
         css={`
-          color: #000;
           text-decoration: underline;
           cursor: pointer;
         `}

@@ -14,15 +14,10 @@ const List = styled.nav`
 
   & > a {
     text-decoration: none;
-    color: rgb(100, 49, 151);
     /* color: #52d8ff; */
     font-size: 1.2em;
     font-weight: 600;
     font-family: 'Cabin', sans-serif;
-
-    &.current-page {
-      border-bottom: 2px solid rgb(100, 49, 151);
-    }
   }
 `;
 

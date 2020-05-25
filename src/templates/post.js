@@ -42,14 +42,6 @@ const PostTemplate = ({ data: { mdx: post } }) => (
     >
       Published: {post.frontmatter.date}
     </p>
-    {/* <Img
-      css={`
-        width: 300px;
-        height: 300px;
-      `}
-      fluid={post.frontmatter.image.sharp.fluid}
-      alt="post image"
-    /> */}
     <MDXRenderer>{post.body}</MDXRenderer>
   </PostLayout>
 );

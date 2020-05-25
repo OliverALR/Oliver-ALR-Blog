@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { FaMoon, FaSun } from 'react-icons/fa';
+
+const appear = keyframes`
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  } 
+  33% {
+    transform: translateY(-66px);
+    opacity: 0.33;
+  } 66% {
+    transform: translateY(-33px);
+    opacity: 0.66;
+  } 100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+`;
 
 const Container = styled.div`
   display: flex;
@@ -21,10 +39,44 @@ const Image = styled(Img)`
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: solid 3px rgb(100, 49, 151);
+`;
+
+const Moon = styled(FaMoon)`
+  width: 30px;
+  height: 30px;
+  animation: ${appear} 750ms linear;
+
+  &:hover {
+    color: #000;
+    transition: all 500ms linear;
+  }
+`;
+
+const Sun = styled(FaSun)`
+  width: 35px;
+  height: 35px;
+  color: rgb(199, 200, 196);
+  animation: ${appear} 750ms linear;
+
+  &:hover {
+    color: #fff;
+    transition: all 400ms linear;
+  }
 `;
 
 const Header = () => {
+  const [light, setLight] = useState(true);
+  const [theme, setTheme] = useState('light');
+
+  const themeToggler = () => {
+    if (light) {
+      setLight(false);
+    } else {
+      setLight(true);
+    }
+    theme === 'light' ? setTheme('dark') : setTheme('light');
+  };
+
   const { image } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "me.jpg" }) {
@@ -39,8 +91,15 @@ const Header = () => {
 
   return (
     <Container>
-      <Image fluid={image.sharp.fluid} alt="Oliver ALR" />
-      <span>☀️</span>
+      <Image className="profile" fluid={image.sharp.fluid} alt="Oliver ALR" />
+      <span
+        css={`
+          cursor: pointer;
+        `}
+        onClick={themeToggler}
+      >
+        {light ? <Moon className="mode-icon" /> : <Sun />}
+      </span>
     </Container>
   );
 };
