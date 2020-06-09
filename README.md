@@ -1,4 +1,4 @@
-# Oliver-ALR-Blog 
+# OliverALR Personal Blog 
 ## My Official GraphQL Blazing Fast Blog :fire:
 
 *Yes, is faster than yours...*
